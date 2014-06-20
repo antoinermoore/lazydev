@@ -12,6 +12,7 @@
  */
 
 get_header(); ?>
+
 <div id="full-head" >
     <section id="header-reveal">
         <div class="header-text">
@@ -26,6 +27,8 @@ get_header(); ?>
         </div>
     </section>
 </div>
+       <div id="main-content-wrapper">
+	<div id="content" class="site-content">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
                     <div id="feature-box">
@@ -47,7 +50,7 @@ get_header(); ?>
                     </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
+     </div><!-- #main-content-wrapper --> 
 <?php get_footer(); ?>
 
         
