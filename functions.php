@@ -40,11 +40,19 @@ function lazydelivery_setup() {
 	 */
 	//add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
+	/* This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'lazydelivery' ),
-	) );
+	) );*/
 	
+        register_nav_menus(
+        array(
+            'primary' => __( 'Primary Menu', 'lazydelivery' ),
+            'user-menu' => __( 'User Menu', 'lazydelivery' ),
+        )
+    );
+        
+        
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
