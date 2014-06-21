@@ -27,8 +27,16 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			<?php if ( is_user_logged_in() ) { ?>
+                             
+                            <?php wp_nav_menu( array( 'theme_location' => 'user-menu', 'items_wrap' => '<ul id="menu-menu" class="menu">%3$s</ul>', 'container_class' => 'menu-menu-container' ) );?> <!-- sign out --> 
+                     
+                                 <?php } else { ?>
+                            
+                                     <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'items_wrap' => '<ul id="menu-menu" class="menu">%3$s</ul>', 'container_class' => 'menu-menu-container' ) );?> <!-- sign in --> 
+                        <?php } ?>
 		</nav><!-- #site-navigation -->
+                
                 </div><!--site branding-->
 	</header><!-- #masthead -->
         
